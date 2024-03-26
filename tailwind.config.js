@@ -19,7 +19,11 @@ module.exports = {
     extend: {
      colors: {
       black: '#060606',
-      white: '#e6e6e6',
+      white: {
+        1: '#fdfcfa',
+        2: '#f8f8fa',
+        'main': '#fff'
+      },
       brand: {
         50: '#fffbeb',
         100: '#fef3c7',
@@ -41,8 +45,10 @@ module.exports = {
         600: '#4f46e5',
         700: '#4338ca',
         800: '#3730a3',
+        900: '#1e1b4b',
       },
       success: {
+        100: '#dcfce7',
         200: '#bbf7d0',
         300: '#86efac',
         400: '#4ade80',
