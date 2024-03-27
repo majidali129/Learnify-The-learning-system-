@@ -25,6 +25,7 @@ import Card from "@/components/Card";
 import { MoveRight } from "lucide-react";
 import InstructorCard from "@/components/InstructorCard";
 import { INSTRUCTORS } from "@/constants";
+import Footer from "@/components/Footer";
 const HomePage = () => {
   return (
     <>
@@ -39,7 +40,7 @@ const HomePage = () => {
               Our mision is to help people to find the best course online and
               learn with expert anytime, anywhere.
             </p>
-            <Button size="lg">Create Account</Button>
+            <Button size="lg" className="font-semibold">Create Account</Button>
           </div>
         </div>
         <div className="self-start order-1 md:order-2">
@@ -86,7 +87,15 @@ const HomePage = () => {
         <div className="tw-container ">
           <div className="flex-col flex-center tw-space-y">
             <h2>Best selling courses</h2>
-            <div className="grid w-full card-wrapper sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-4 md:gap-x-2.5 md:gap-y-2.5  lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
+            <div className="course-grid">
+              <Card
+                students={100023}
+                image={courseImg1}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Front End Development "
+              />
               <Card
                 students={100023}
                 image={courseImg1}
@@ -129,7 +138,7 @@ const HomePage = () => {
         <div className="tw-container ">
           <div className="flex-col flex-center tw-space-y">
             <h2>Recently Added Courses</h2>
-            <div className="grid w-full card-wrapper sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-4 md:gap-x-2.5 md:gap-y-2.5  lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
+            <div className="course-grid">
               <Card
                 students={100023}
                 image={courseImg6}
@@ -156,6 +165,14 @@ const HomePage = () => {
               />
               <Card
                 students={100023}
+                image={courseImg8}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Back End Development In JavaScript"
+              />
+              <Card
+                students={100023}
                 image={courseImg9}
                 rating={4.2}
                 category="Development"
@@ -163,7 +180,7 @@ const HomePage = () => {
                 title="Let's Build Communication "
               />
             </div>
-            <Button variant="secondary" className="flex-center">
+            <Button variant="secondary" className="font-semibold flex-center">
               {" "}
               <span>Browse All Courses</span>{" "}
               <span>
@@ -226,6 +243,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <Footer />
     </>
   );
 };

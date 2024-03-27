@@ -12,9 +12,9 @@ interface CardProps {
 
 const Card = ({image, title, category, rating, students, price}:CardProps) => {
   return (
-    <div className=" max-w-[410px] box-shadow bg-white-1 border border-brand-800 px-2.5 sm:px-2 py-2.5 sm:py-3 !rounded-[5px] flex flex-col gap-y-2 ">
+    <div className=" max-w-[410px] box-shadow bg-white-1  !rounded-[5px] flex flex-col gap-y-2 ">
       <figure className="h-[210px] rounded-md relative">
-        <div className="absolute z-50 flex items-center justify-center w-12 h-12 p-3 rounded-full -bottom-2 right-2 price bg-brand-500 text-white-1">
+        <div className="absolute z-50 flex items-center justify-center w-12 h-12 p-3 rounded-full -bottom-2 right-2 price bg-brand-800 text-white-1">
             {`${price}$`}
         </div>
         <img
@@ -23,7 +23,7 @@ const Card = ({image, title, category, rating, students, price}:CardProps) => {
           className="object-cover w-full h-full aspect-video [clip-path:polygon(0_0,100%_0,100%_90%,0%_100%);]"
         />
       </figure>
-      <div className="space-y-2">
+      <div className="px-2 py-2 space-y-2 lg:py-3 lg:px-3">
         <Badge variant='outline'>{category}</Badge>
         <h5>{title}</h5>
         <p className="flex-between">

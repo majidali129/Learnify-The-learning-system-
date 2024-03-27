@@ -37,6 +37,7 @@ module.exports = {
         900: '#451a03',
       },
       secondary: {
+        50: '#f7f9fa',
         100: '#e0e7ff',
         200: "#c7d2fe",
         300: '#a5b4fc',
@@ -82,6 +83,7 @@ module.exports = {
       },
       dark: {
         // stone color for dark
+        50: '#64748b',
         100: '#a8a29e',
         200: '#44403c',
         300: '#292524',
@@ -91,6 +93,17 @@ module.exports = {
 
      }
     },
+    plugins: [
+      function ({addUtilities}) {
+          const extendUnderline = {
+              '.underline': {
+                  'textDecoration': 'underline',
+                  'text-decoration-color': '#F59E0B',
+              },
+          }
+          addUtilities(extendUnderline)
+      }
+  ]
   },
   plugins: [require("tailwindcss-animate")],
 }

@@ -18,7 +18,7 @@ const Navbar = () => {
     </div>
     <div className="actions">
       <div></div>
-      <div className="flex-between !gap-3">
+      <div className="flex-between !gap-3 *:font-semibold">
         <Button variant="secondary" className="px-5">
           Create Account
         </Button>
