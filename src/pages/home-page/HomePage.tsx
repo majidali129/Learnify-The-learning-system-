@@ -12,6 +12,14 @@ import courseImg6 from "@/assets/images/best-courses/6.png";
 import courseImg7 from "@/assets/images/best-courses/7.png";
 import courseImg8 from "@/assets/images/best-courses/8.png";
 import courseImg9 from "@/assets/images/best-courses/9.png";
+import google from "@/assets/images/companies/google.png"
+import netflex from "@/assets/images/companies/netflix.png"
+import youtube from "@/assets/images/companies/youtube.png"
+import lenove from "@/assets/images/companies/lenovo.png"
+import slack from "@/assets/images/companies/slack.png"
+import verison from "@/assets/images/companies/verison.png"
+import lexmark from "@/assets/images/companies/lexmark.png"
+import microsoft from "@/assets/images/companies/microsoft.png"
 import BrowseCategoryCard from "@/components/BrowseCategoryCard";
 import Card from "@/components/Card";
 import { MoveRight } from "lucide-react";
@@ -20,8 +28,8 @@ import { INSTRUCTORS } from "@/constants";
 const HomePage = () => {
   return (
     <>
-      <Header />
-      <Navbar />
+      {/* <Header />
+      <Navbar /> */}
       {/* Hero section */}
       <section className=" w-full flex flex-col md:flex-row items-center !gap-0 bg-[linear-gradient(3deg,rgba(203,207,222,0.020975577731092487)_0%,#fff_100%)] ">
         <div className="order-2 lg:w-10/12 max-sm:text-center max-sm:py-3 md:order-1">
@@ -184,10 +192,36 @@ const HomePage = () => {
             <h2>Top instructors of the month</h2>
             <div className="grid w-full card-wrapper max-sm:gap-y-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 xl:gap-x-6 gap-y-4 md:gap-4 lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
              {
-              INSTRUCTORS.slice(6,).map(ins => (
+              INSTRUCTORS.slice(5,).map(ins => (
                 <InstructorCard key={ins.id} name={ins.name} field={ins.field} students={ins.noOfStudents} rating={ins.rating}  />
               ))
              }
+            </div>
+            <div className="flex-between">
+              <p className="text">Thousands of students waiting for a instructor. Start teaching & earning now!.</p>
+              <Button variant='link'><span>Become Instructor</span> <MoveRight /></Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted Companies Section */}
+      <section className="bg-white-1">
+        <div className="tw-container">
+          <div className="sm:grid sm:grid-cols-12 md:px-0 lg:px-14 gap-x-10 max-sm:space-y-4">
+            <div className="lg:col-span-3 md:col-span-4 max-sm:text-center">
+              <h2 className="md:leading-6 lg:leading-7">6.3k trusted companies</h2>
+              <p className="text">Uncover the pillars of the education sector, each representing a unique approach to learning and empowerment.</p>
+            </div>
+            <div className="grid md:col-span-8 lg:col-span-9 grid-cols-2 gap-4  lg:grid-cols-4 md:gap-5 lg:gap-4  *:flex *:items-center *:justify-center *:bg-[#fff]  *:tw-shadow-2 *:h-[70px] *:md:h-[78px] *:max-sm:min-h-[70px] *:max-h-[90px] *:shadow-[0_0px_14px_-1px_#acaaaa5a] *:rounded">
+              <div><img src={netflex} alt="netflex logo" /></div>
+              <div><img src={youtube} alt="youtube logo" /></div>
+              <div><img src={google} alt="google logo" /></div>
+              <div><img src={lenove} alt="lenove logo" /></div>
+              <div><img src={slack} alt="slack logo" /></div>
+              <div><img src={verison} alt="verison logo" /></div>
+              <div><img src={lexmark} alt="lexmark logo" /></div>
+              <div><img src={microsoft} alt="microsoft logo" /></div>
             </div>
           </div>
         </div>
@@ -197,3 +231,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
