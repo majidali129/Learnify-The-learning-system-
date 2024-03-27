@@ -29,8 +29,8 @@ import Footer from "@/components/Footer";
 const HomePage = () => {
   return (
     <>
-      {/* <Header />
-      <Navbar /> */}
+      <Header />
+      <Navbar />
       {/* Hero section */}
       <section className=" w-full flex flex-col md:flex-row items-center !gap-0 bg-[linear-gradient(3deg,rgba(203,207,222,0.020975577731092487)_0%,#fff_100%)] ">
         <div className="order-2 lg:w-10/12 max-sm:text-center max-sm:py-3 md:order-1">
