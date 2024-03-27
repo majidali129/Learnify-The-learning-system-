@@ -16,6 +16,7 @@ import BrowseCategoryCard from "@/components/BrowseCategoryCard";
 import Card from "@/components/Card";
 import { MoveRight } from "lucide-react";
 import InstructorCard from "@/components/InstructorCard";
+import { INSTRUCTORS } from "@/constants";
 const HomePage = () => {
   return (
     <>
@@ -178,20 +179,15 @@ const HomePage = () => {
 
       {/* Top Instructor Section */}
       <section className="bg-white-1">
-        <div className="tw-container ">
+        <div className="tw-container">
           <div className="flex-col flex-center tw-space-y">
             <h2>Top instructors of the month</h2>
-            <div className="grid w-full card-wrapper sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-4 md:gap-x-2.5 md:gap-y-2.5  lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
-              <InstructorCard
-                name="Majid Ali"
-                field="Developer"
-                students={2323}
-                rating={4.8}
-              >
-                <Button variant="secondary" size="sm" className="w-11/12">
-                  Message
-                </Button>
-              </InstructorCard>
+            <div className="grid w-full card-wrapper max-sm:gap-y-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 xl:gap-x-6 gap-y-4 md:gap-4 lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
+             {
+              INSTRUCTORS.slice(6,).map(ins => (
+                <InstructorCard key={ins.id} name={ins.name} field={ins.field} students={ins.noOfStudents} rating={ins.rating}  />
+              ))
+             }
             </div>
           </div>
         </div>

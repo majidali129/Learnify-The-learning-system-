@@ -7,12 +7,12 @@ interface InstructorProp{
     field: string;
     students: number;
     rating: number;
-    children: ReactNode
+    children?: ReactNode
 }
 
 const InstructorCard = ({children, name, field, students, rating}: InstructorProp) => {
   return (
-    <div className="min-w-[244px] max-w-[420px] w-[230px] box-shadow">
+    <div className="box-shadow">
     <figure>
       <img
         src={courseImg1}
@@ -25,7 +25,7 @@ const InstructorCard = ({children, name, field, students, rating}: InstructorPro
       <h5>{name}</h5>
       <h6 className="text !mt-0">{field}</h6>
     </div>
-    <div className="px-3 py-3 space-y-2 ">
+    <div className="px-3 py-2 space-y-2 ">
       <div className="flex-between">
         <div className="flex-between">
           <span>

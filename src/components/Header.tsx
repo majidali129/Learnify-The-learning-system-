@@ -28,11 +28,11 @@ const Header = () => {
       </ul>
       <div className="flex-between">
         <Select>
-          <SelectTrigger className="  !outline-none !ring-0 border border-dark-100 rounded">
+          <SelectTrigger className="!outline-none select-none !ring-0 border !border-dark-100 rounded">
             <SelectValue placeholder="Select currency" />
           </SelectTrigger>
-          <SelectContent>
-            <SelectGroup className="bg-white-1">
+          <SelectContent >
+            <SelectGroup>
               {/* <SelectItem value="gmt">Greenwich Mean Time (GMT)</SelectItem> */}
               <SelectItem value="pkr">PKR</SelectItem>
               <SelectItem value="inr">INR</SelectItem>
@@ -42,10 +42,10 @@ const Header = () => {
           </SelectContent>
         </Select>
         <Select>
-          <SelectTrigger className=" !outline-none !ring-0 border border-dark-100 rounded">
+          <SelectTrigger className=" !outline-none select-none !ring-0 border border-dark-100 rounded">
             <SelectValue placeholder="Select Language" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent >
             <SelectGroup>
               {/* <SelectItem value="gmt">Greenwich Mean Time (GMT)</SelectItem> */}
               <SelectItem value="pkr">English</SelectItem>
