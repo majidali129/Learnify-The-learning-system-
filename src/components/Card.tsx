@@ -23,7 +23,7 @@ const Card = ({image, title, category, rating, students, price}:CardProps) => {
           className="object-cover w-full h-full aspect-video [clip-path:polygon(0_0,100%_0,100%_90%,0%_100%);]"
         />
       </figure>
-      <div className="space-y-1.5">
+      <div className="space-y-2">
         <Badge variant='outline'>{category}</Badge>
         <h5>{title}</h5>
         <p className="flex-between">

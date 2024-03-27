@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import bannerImg from "@/assets/images/hero.png";
+import promotion1 from "@/assets/images/promotion-1.png";
+import promotion2 from "@/assets/images/promotion-2.png";
 import courseImg1 from "@/assets/images/best-courses/1.png";
 import courseImg2 from "@/assets/images/best-courses/2.png";
 import courseImg3 from "@/assets/images/best-courses/3.png";
@@ -12,6 +14,8 @@ import courseImg8 from "@/assets/images/best-courses/8.png";
 import courseImg9 from "@/assets/images/best-courses/9.png";
 import BrowseCategoryCard from "@/components/BrowseCategoryCard";
 import Card from "@/components/Card";
+import { MoveRight } from "lucide-react";
+import InstructorCard from "@/components/InstructorCard";
 const HomePage = () => {
   return (
     <>
@@ -74,10 +78,38 @@ const HomePage = () => {
           <div className="flex-col flex-center tw-space-y">
             <h2>Best selling courses</h2>
             <div className="grid w-full card-wrapper sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-4 md:gap-x-2.5 md:gap-y-2.5  lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
-              <Card students={100023} image={courseImg1} rating={4.2} category="Development" price={321} title="Front End Development " />
-              <Card students={100023} image={courseImg2} rating={4.2} category="Development" price={321} title="Learn Game Development with C#" />
-              <Card students={100023} image={courseImg3} rating={4.2} category="Development" price={321} title="Back End Development In JavaScript" />
-              <Card students={100023} image={courseImg4} rating={4.2} category="Development" price={321} title="Let's Build Communication " />
+              <Card
+                students={100023}
+                image={courseImg1}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Front End Development "
+              />
+              <Card
+                students={100023}
+                image={courseImg2}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Learn Game Development with C#"
+              />
+              <Card
+                students={100023}
+                image={courseImg3}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Back End Development In JavaScript"
+              />
+              <Card
+                students={100023}
+                image={courseImg4}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Let's Build Communication "
+              />
             </div>
           </div>
         </div>
@@ -89,10 +121,77 @@ const HomePage = () => {
           <div className="flex-col flex-center tw-space-y">
             <h2>Recently Added Courses</h2>
             <div className="grid w-full card-wrapper sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-4 md:gap-x-2.5 md:gap-y-2.5  lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
-              <Card students={100023} image={courseImg6} rating={4.2} category="Development" price={321} title="Front End Development " />
-              <Card students={100023} image={courseImg7} rating={4.2} category="Development" price={321} title="Learn Game Development with C#" />
-              <Card students={100023} image={courseImg8} rating={4.2} category="Development" price={321} title="Back End Development In JavaScript" />
-              <Card students={100023} image={courseImg9} rating={4.2} category="Development" price={321} title="Let's Build Communication " />
+              <Card
+                students={100023}
+                image={courseImg6}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Front End Development "
+              />
+              <Card
+                students={100023}
+                image={courseImg7}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Learn Game Development with C#"
+              />
+              <Card
+                students={100023}
+                image={courseImg8}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Back End Development In JavaScript"
+              />
+              <Card
+                students={100023}
+                image={courseImg9}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Let's Build Communication "
+              />
+            </div>
+            <Button variant="secondary" className="flex-center">
+              {" "}
+              <span>Browse All Courses</span>{" "}
+              <span>
+                <MoveRight />
+              </span>
+            </Button>
+          </div>
+        </div>
+      </section>
+      {/* Promotion Section */}
+      <section className="bg-inherit">
+        <div className="tw-container ">
+          <div className="py-2 flex-center">
+            <div className="grid w-full gap-6 card-wrapper sm:grid-cols-2">
+              <img src={promotion1} alt="Promotion Banner Image" />
+              <img src={promotion2} alt="Promotion Banner Image" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Instructor Section */}
+      <section className="bg-white-1">
+        <div className="tw-container ">
+          <div className="flex-col flex-center tw-space-y">
+            <h2>Top instructors of the month</h2>
+            <div className="grid w-full card-wrapper sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-4 md:gap-x-2.5 md:gap-y-2.5  lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
+              <InstructorCard
+                name="Majid Ali"
+                field="Developer"
+                students={2323}
+                rating={4.8}
+              >
+                <Button variant="secondary" size="sm" className="w-11/12">
+                  Message
+                </Button>
+              </InstructorCard>
             </div>
           </div>
         </div>
