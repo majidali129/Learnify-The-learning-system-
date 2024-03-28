@@ -14,7 +14,7 @@ const Card = ({image, title, category, rating, students, price}:CardProps) => {
   return (
     <div className=" max-w-[410px] box-shadow bg-white-1  !rounded-[5px] flex flex-col gap-y-2 ">
       <figure className="h-[210px] rounded-md relative">
-        <div className="absolute z-50 flex items-center justify-center w-12 h-12 p-3 rounded-full -bottom-2 right-2 price bg-brand-800 text-white-1">
+        <div className="absolute z-40 flex items-center justify-center w-12 h-12 p-3 rounded-full -bottom-2 right-2 price bg-brand-800 text-white-1">
             {`${price}$`}
         </div>
         <img

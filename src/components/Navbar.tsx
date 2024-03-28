@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { GoSearch } from "react-icons/go";
 
-import logo from "@/assets/images/logo.png";
+import logo from "@/assets/images/logo-dark.png";
 import { Input } from "./ui/input";
 
 const Navbar = () => {
   return (
-    <nav className="py-1.5 flex-between bg-white-1 lg:px-6 border-b border-slate-300">
+    <nav className="py-1.5 max-md:hidden flex-between bg-white-1 lg:px-6 border-b border-slate-300">
     <div className="flex-between">
       <figure>
         <img src={logo} className="lg:w-36 md:w-24" alt="Learnify Logo" />
