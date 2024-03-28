@@ -46,7 +46,7 @@ const Footer = () => {
           <aside className="md:w-[40%]  text-wrap md:pe-10 gap-y-3  flex flex-col lg:items-start gap-1 lg:gap-3">
             <div >
                 <Logo />
-                <p className="text-gray-500">
+                <p className="mt-1 leading-5 text-gray-500">
                   Learnify is a leading learning management system designed to
                   revolutionize online education. We provides a seamless
                   learning experience for students and educators alike.

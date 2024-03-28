@@ -44,7 +44,7 @@ h5 {
   @apply mb-0 font-semibold max-sm:text-sm text-dark-300 md:font-bold leading-[18px] text-wrap;
 }
 .text {
-  @apply text-[.8rem] md:text-[1rem] 2xl:text-[1.2rem] text-dark-100 [&:not(:first-child)]:mt-3;
+  @apply text-[.8rem] md:text-[1rem] 2xl:text-[1.2rem] leading-5 text-dark-100 [&:not(:first-child)]:mt-3;
 }
 .flex-center {
   @apply flex items-center justify-center gap-2;
