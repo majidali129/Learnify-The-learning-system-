@@ -20,7 +20,7 @@ const Footer = () => {
               Start learning with 67.1k students around the world.
             </h2>
             <div className="flex items-center w-full gap-3 max-md:justify-center lg:flex-row">
-              <Button variant='outline' className=" text-white-1 border-slate-300 hover:bg-transparent">Join Our Family</Button>
+              <Button variant='outline' className=" text-brand-500 border-brand-500 hover:bg-transparent">Join Our Family</Button>
               <Button variant='secondary' className="bg-dark-300  hover:!bg-dark-300/90 text-white-2">Browse All Courses</Button>
             </div>
           </aside>
@@ -54,19 +54,19 @@ const Footer = () => {
             </div>
             <div className="flex max-md:gap-y-1.5 max-md:justify-center gap-x-2 *:w-[40px] *:h-[40px] *:lg:w-[46px] *:lg:h-[46px] *:bg-dark-300 *:flex *:items-center *:justify-center *:text-lg *:text-[#fff]">
               <span>
-                <TiSocialFacebook />
+                <TiSocialFacebook className="fill-brand-500"/>
               </span>
               <span>
-                <FaInstagram />
+                <FaInstagram className="fill-brand-500"/>
               </span>
-              <span className="!bg-primary-500 shadow-md shadow-primary-400">
-                <FaLinkedinIn />
-              </span>
-              <span>
-                <FaTwitter />
+              <span >
+                <FaLinkedinIn className="fill-brand-500"/>
               </span>
               <span>
-                <FaYoutube />
+                <FaTwitter className="fill-brand-500"/>
+              </span>
+              <span>
+                <FaYoutube className="fill-brand-500"/>
               </span>
             </div>
           </aside>

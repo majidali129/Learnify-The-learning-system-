@@ -38,7 +38,7 @@ const HomePage = () => {
       {/* Hero section */}
       <section className="w-full flex flex-col md:flex-row items-center !gap-0 bg-[linear-gradient(3deg,rgba(203,207,222,0.020975577731092487)_0%,#fff_100%)] ">
         <div className="order-2 px-3 lg:w-10/12 max-sm:py-3 md:order-1">
-          <div className="mx-auto space-y-2 md:space-y-3 md:w-5/6 lg:w-4/6">
+          <div className="mx-auto space-y-2 md:space-y-4 md:w-5/6 lg:w-4/6">
             <h1>Learn with expert anytime anywhere</h1>
             <p className="!mt-3 font-medium text">
               Our mision is to help people to find the best course online and

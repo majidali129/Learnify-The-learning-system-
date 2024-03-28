@@ -12,7 +12,7 @@ const badgeVariants = cva(
           "border-brand-400 bg-brand-900 text-slate-50 hover:bg-brand-900/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/80",
         secondary:
           "border-secodary-900 bg-secondary-200 text-dark-500 hover:bg-secondary-300/70 ",
-        outline: "border-brand-900 bg-white-1 hover:bg-brand-900 hover:border-brand-400 hover:text-white-1",
+        outline: " bg-brand-800 hover:bg-brand-500 text-white-1 hover:ring hover:ring-1 hover:ring-offset-0 hover:ring-brand-500",
       },
     },
     defaultVariants: {

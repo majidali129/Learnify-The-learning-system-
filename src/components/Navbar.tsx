@@ -11,7 +11,7 @@ const Navbar = () => {
       <figure>
         <img src={logo} className="lg:w-36 md:w-24" alt="Learnify Logo" />
       </figure>
-      <div className="flex max-w-4xl lg:w-[300px] items-center bg-transparent border rounded-sm border-slate-300 focus-within:ring-1 focus-within:ring-brand-500 transition-all duration-100 focus-within:ring-offset-2 px-1.5">
+      <div className="flex max-w-5xl lg:w-[400px] items-center bg-transparent border rounded-full border-slate-300 px-1.5">
         <span><GoSearch /></span>
         <Input type="email" placeholder="What do you want to learn" />
       </div>

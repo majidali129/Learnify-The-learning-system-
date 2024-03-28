@@ -29,7 +29,7 @@ const InstructorCard = ({children, name, field, students, rating}: InstructorPro
       <div className="flex-between">
         <div className="flex-between">
           <span>
-            <FaStar className="fill-brand-500" />
+            <FaStar className="fill-warning-500" />
           </span>
           <span>{rating}</span>
         </div>
