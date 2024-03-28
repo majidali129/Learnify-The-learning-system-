@@ -13,8 +13,8 @@ import { MoveRight } from "lucide-react";
 const Footer = () => {
   return (
     <>
-      <footer className="border-b bg-dark-500 xl:px-10 border-b-slate-800 footer">
-        <div className="flex flex-col items-center p-10 md:flex-row">
+      <footer className="border-b bg-dark-500 xl:px-10 border-b-slate-800">
+        <div className="flex flex-col items-center py-10 md:flex-row">
           <aside className="xl:w-[60%] max-sm:justify-center space-y-2.5 text-wrap md:pe-10 flex flex-col items-center lg:items-start gap-1 lg:gap-3">
             <h2 className="max-sm:text-center text-white-1">
               Start learning with 67.1k students around the world.
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </footer>
 
-      <footer className="px-3.5 sm:px-7 bg-dark-500 md:px-10">
+      <footer className="px-3.5 sm:px-7 bg-dark-500 xl:px-10">
         <div className="flex flex-col items-start *:py-4 lg:items-center max-md:gap-y-3 md:flex-row ">
           <aside className="md:w-[40%]  text-wrap md:pe-10 gap-y-3  flex flex-col lg:items-start gap-1 lg:gap-3">
             <div >
