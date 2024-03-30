@@ -1,12 +1,15 @@
 import ReusableBreadCrumb from "@/components/ReusableBreadCrumb";
 import {
   Check,
+  ChevronDown,
   CirclePlay,
   Clock3,
+  File,
   FolderOpen,
   Globe,
   MoveRight,
   OctagonAlert,
+  Play,
   Star,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -78,6 +81,12 @@ const courseRequirements: Pick<CourseType, "requirements">[] = [
       "No prior experience with Python or programming is necessary.",
   },
 ];
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const SingleCourse = () => {
   return (
@@ -144,10 +153,10 @@ const SingleCourse = () => {
           </div>
         </div>
       </section>
-      <section className="">
-        <div className="tw-container">
+      <section className="bg-white-1">
+        <div className="tw-container ">
           <div className="grid grid-cols-12">
-            <div className="col-span-9 space-y-2">
+            <div className="col-span-9 space-y-2 ">
               <article className="p-5 space-y-4 text-white-1 bg-secondary-100 rounded-[2px]">
                 <h3>What you'll learn</h3>
                 <ul className="grid md:grid-cols-2 gap-x-7 *:leading-5 gap-y-1.5 *:text-[.9rem] *:text-dark-500">
@@ -187,147 +196,170 @@ const SingleCourse = () => {
                   ))}
                 </ul>
               </article>
-              <article className="py-5 space-y-4 ">
-                <div className="flex-between">
-                  <h3>Curriculum</h3>
-                  <div className="my-4 text-sm font-medium text-gray-500 flex-between">
-                    <div className="flex-between !gap-1">
-                      <FolderOpen className="w-4 h-4 stroke-brand-500" />
-                      <span>
-                        <span>{10}</span> Sections
-                      </span>
-                    </div>
-                    <div className="flex-between !gap-1">
-                    <CirclePlay  className="w-4 h-4 stroke-brand-500" />
-                      <span>
-                        <span>{202}</span> lectures
-                      </span>
-                    </div>
-                    <div className="flex-between !gap-1">
-                      <Clock3 className="w-4 h-4 stroke-brand-500" />
-                      <span>19h 37m</span>
-                    </div>
 
+              <article className="py-5 space-y-4">
+                <Accordion type="single" collapsible>
+                  <div className="flex-between">
+                    <h3>Curriculum</h3>
+                    <div className="my-4 text-sm font-medium text-gray-500 flex-between">
+                      <div className="flex-between !gap-1">
+                        <FolderOpen className="w-4 h-4 stroke-brand-500" />
+                        <span>
+                          <span>{10}</span> Sections
+                        </span>
+                      </div>
+                      <div className="flex-between !gap-1">
+                        <CirclePlay className="w-4 h-4 stroke-brand-500" />
+                        <span>
+                          <span>{202}</span> lectures
+                        </span>
+                      </div>
+                      <div className="flex-between !gap-1">
+                        <Clock3 className="w-4 h-4 stroke-brand-500" />
+                        <span>19h 37m</span>
+                      </div>
+                    </div>
                   </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-normal">
-                          Getting Started
-                        </h4>
-                        <div className="flex items-center space-x-2">
-                          <ChevronUpIcon classname="w-5 h-5 text-gray-500" />
-                          <span className="text-sm font-medium text-gray-500">
-                            4 lectures
-                          </span>
-                          <span className="text-sm font-medium text-gray-500">
-                            51m
-                          </span>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="!gap-1.5 hover:no-underline [&[data-state=open]>div>h5]:text-brand-700 [&[data-state=open]>div>h5]:underline [&[data-state=open]>svg]:text-brand-700">
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 shrink-0" />
+                      <div className="w-full flex-between">
+                        <h5 className="font-normal">Getting Started</h5>
+                        <div className="flex-between !gap-3">
+                          <div className="header-styles">
+                            <CirclePlay className="w-4 h-4 stroke-brand-500" />
+                            <span>
+                              <span>{202}</span> lectures
+                            </span>
+                          </div>
+                          <div className="header-styles">
+                            <Clock3 className="w-4 h-4 stroke-brand-500" />
+                            <span>19h 37m</span>
+                          </div>
                         </div>
                       </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
                       <ul className="mt-2 space-y-2">
                         <li className="flex items-center justify-between">
-                          <span>What's in Webflow?</span>
+                          <p className="flex-between">
+                            <span>
+                              <Play className="w-4 h-4 fill-dark-200 stroke-dark-200" />
+                            </span>
+                            <span>What's in Webflow?</span>
+                          </p>
                           <span className="text-sm text-gray-500">07:31</span>
                         </li>
                         <li className="flex items-center justify-between">
-                          <span>Sign up in Webflow</span>
-                          <span className="text-sm text-gray-500">07:31</span>
+                          <p className="flex-between">
+                            <span>
+                              <Play className="w-4 h-4 fill-dark-200 stroke-dark-200" />
+                            </span>
+                            <span>Sign up in Webflow</span>
+                          </p>
+                          <span className="text-sm text-gray-500">03:31</span>
                         </li>
                         <li className="flex items-center justify-between">
-                          <span>Webflow Terms & Conditions</span>
-                          <span className="text-sm text-gray-500">5.3 MB</span>
+                          <p className="flex-between">
+                            <span>
+                              <File className="w-4 h-4 stroke-dark-200" />
+                            </span>
+                            <span>Webflow Terms & Conditions</span>
+                          </p>
+                          <span className="text-sm text-gray-500">03:31</span>
                         </li>
                         <li className="flex items-center justify-between">
-                          <span>Teaser of Webflow</span>
-                          <span className="text-sm text-gray-500">07:31</span>
+                          <p className="flex-between">
+                            <span>
+                              <Play className="w-4 h-4 fill-dark-200 stroke-dark-200" />
+                            </span>
+                            <span>Teaser of Webflow</span>
+                          </p>
+                          <span className="text-sm text-gray-500">03:31</span>
                         </li>
                         <li className="flex items-center justify-between">
-                          <span>Practice Project</span>
-                          <span className="text-sm text-gray-500">5.3 MB</span>
+                          <p className="flex-between">
+                            <span>
+                              <File className="w-4 h-4 stroke-dark-200" />
+                            </span>
+                            <span>Practice Project</span>
+                          </p>
+                          <span className="text-sm text-gray-500">3.32 MB</span>
                         </li>
                       </ul>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-normal">
-                          Secret of Good Design
-                        </h4>
-                        <div className="flex items-center space-x-2">
-                          <ChevronDownIcon classname="w-5 h-5 text-gray-500" />
-                          <span className="text-sm font-medium text-gray-500">
-                            52 lectures
-                          </span>
-                          <span className="text-sm font-medium text-gray-500">
-                            5h 49m
-                          </span>
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="!gap-1.5 hover:no-underline [&[data-state=open]>div>h5]:text-brand-700 [&[data-state=open]>div>h5]:underline [&[data-state=open]>svg]:text-brand-700">
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 shrink-0" />
+                      <div className="w-full flex-between">
+                        <h5 className="font-normal">Secret of Good Design</h5>
+                        <div className="flex-between !gap-3">
+                          <div className="header-styles">
+                            <CirclePlay className="w-4 h-4 stroke-brand-500" />
+                            <span>
+                              <span>{52}</span> lectures
+                            </span>
+                          </div>
+                          <div className="header-styles">
+                            <Clock3 className="w-4 h-4 stroke-brand-500" />
+                            <span>192h</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-normal">
-                          Practice Design Like an Artist
-                        </h4>
-                        <div className="flex items-center space-x-2">
-                          <ChevronDownIcon classname="w-5 h-5 text-gray-500" />
-                          <span className="text-sm font-medium text-gray-500">
-                            43 lectures
-                          </span>
-                          <span className="text-sm font-medium text-gray-500">
-                            53m
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-normal">
-                          Web Development (webflow)
-                        </h4>
-                        <div className="flex items-center space-x-2">
-                          <ChevronDownIcon classname="w-5 h-5 text-gray-500" />
-                          <span className="text-sm font-medium text-gray-500">
-                            137 lectures
-                          </span>
-                          <span className="text-sm font-medium text-gray-500">
-                            10h 6m
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-normal">
-                          Secrets of Making Money Freelancing
-                        </h4>
-                        <div className="flex items-center space-x-2">
-                          <ChevronDownIcon classname="w-5 h-5 text-gray-500" />
-                          <span className="text-sm font-medium text-gray-500">
-                            21 lectures
-                          </span>
-                          <span className="text-sm font-medium text-gray-500">
-                            38m
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-normal">Advanced</h4>
-                        <div className="flex-between">
-                          <ChevronDownIcon classname="w-5 h-5 text-gray-500" />
-                          <span className="text" >
-                            39 lectures
-                          </span>
-                          <span className="text">
-                            91m
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <ul className="mt-2 space-y-2">
+                        <li className="flex items-center justify-between">
+                          <p className="flex-between">
+                            <span>
+                              <Play className="w-4 h-4 fill-dark-200 stroke-dark-200" />
+                            </span>
+                            <span> Practice Design Like an Artist</span>
+                          </p>
+                          <span className="text-sm text-gray-500">07:31</span>
+                        </li>
+                        <li className="flex items-center justify-between">
+                          <p className="flex-between">
+                            <span>
+                              <Play className="w-4 h-4 fill-dark-200 stroke-dark-200" />
+                            </span>
+                            <span>Sign up in Webflow</span>
+                          </p>
+                          <span className="text-sm text-gray-500">03:31</span>
+                        </li>
+                        <li className="flex items-center justify-between">
+                          <p className="flex-between">
+                            <span>
+                              <File className="w-4 h-4 stroke-dark-200" />
+                            </span>
+                            <span>Webflow Terms & Conditions</span>
+                          </p>
+                          <span className="text-sm text-gray-500">03:31</span>
+                        </li>
+                        <li className="flex items-center justify-between">
+                          <p className="flex-between">
+                            <span>
+                              <Play className="w-4 h-4 fill-dark-200 stroke-dark-200" />
+                            </span>
+                            <span>Teaser of Webflow</span>
+                          </p>
+                          <span className="text-sm text-gray-500">03:31</span>
+                        </li>
+                        <li className="flex items-center justify-between">
+                          <p className="flex-between">
+                            <span>
+                              <File className="w-4 h-4 stroke-dark-200" />
+                            </span>
+                            <span>Practice Project</span>
+                          </p>
+                          <span className="text-sm text-gray-500">3.32 MB</span>
+                        </li>
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                </Accordion>
               </article>
             </div>
           </div>
@@ -338,41 +370,3 @@ const SingleCourse = () => {
 };
 
 export default SingleCourse;
-
-function ChevronDownIcon({ classname }: { classname: string }) {
-  return (
-    <svg
-      className={classname}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m6 9 6 6 6-6" />
-    </svg>
-  );
-}
-
-function ChevronUpIcon({ classname }: { classname: string }) {
-  return (
-    <svg
-      className={classname}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m18 15-6-6-6 6" />
-    </svg>
-  );
-}

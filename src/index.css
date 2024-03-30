@@ -41,7 +41,7 @@ h4 {
   @apply text-[1rem] lg:text-[1.1rem] 2xl:text-[2rem] text-dark-500 font-[700];
 }
 h5 {
-  @apply mb-0 font-semibold tracking-wide max-sm:text-sm text-dark-300 leading-[18px] text-wrap;
+  @apply mb-0 font-semibold tracking-wide max-sm:text-sm md:text-[1.1rem] text-dark-300 leading-[18px] text-wrap;
 }
 .text {
   @apply text-[.8rem] md:text-[1rem] 2xl:text-[1.2rem] leading-5 text-dark-100 [&:not(:first-child)]:mt-3;
@@ -73,10 +73,10 @@ h5 {
 .footer-link{
   @apply hover:underline decoration-brand-500 hover:underline-offset-[5px] cursor-pointer select-none flex-between !gap-1 max-md:pointer-events-none
 }
-
-.accordion-title{
-  @apply text-[.9rem] md:text-[1.2rem] px-3 flex items-center justify-between !w-full border;
+.header-styles{
+  @apply text-sm font-medium !gap-1 text-gray-500 flex-between
 }
+
 
 input::placeholder,
 select::placeholder {
