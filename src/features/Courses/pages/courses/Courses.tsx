@@ -9,11 +9,11 @@ import {
 import Search from "@/components/Search";
 import GlobalPagination from "@/components/GlobalPagination";
 import courseImg6 from "@/assets/images/best-courses/6.png";
-import courseImg7 from "@/assets/images/best-courses/7.png";
 
 import Card from "@/components/Card";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 const SUGGESTIONS: string[] = [
   "user interface",
   "user experience",
@@ -61,14 +61,19 @@ const Courses = () => {
         <div className="py-2.5 flex-between">
           <div className="flex-between">
             <span>Suggestions: </span>
-             <div className="flex flex-row items-center gap-2">
-                {SUGGESTIONS.map(sug => <span key={sug} className=" text-secondary-500">{sug}</span>)}
-             </div>
+            <div className="flex flex-row items-center gap-2">
+              {SUGGESTIONS.map((sug) => (
+                <span key={sug} className=" text-secondary-500">
+                  {sug}
+                </span>
+              ))}
+            </div>
           </div>
           <div>
-             <div >
-                <span className="font-semibold">{'2,323,123'} </span><span className="text">results find for “ui/ux design”</span>
-             </div>
+            <div>
+              <span className="font-semibold">{"2,323,123"} </span>
+              <span className="text">results find for “ui/ux design”</span>
+            </div>
           </div>
         </div>
         <div className={`grid grid-cols-12 py-6 gap-x-4`}>
@@ -84,46 +89,16 @@ const Courses = () => {
               filterActive ? "grid-cols-3" : "grid-cols-4"
             } sm:gap-x-4 gap-y-4 md:gap-y-5  lg:gap-x-7 xl:gap-x-5 lg:gap-y-7 *:rounded-sm`}
           >
-            <Card
-              students={100023}
-              image={courseImg6}
-              rating={4.2}
-              category="Development"
-              price={321}
-              title="Front End Development "
-            />
-            <Card
-              students={100023}
-              image={courseImg7}
-              rating={4.2}
-              category="Development"
-              price={321}
-              title="Learn Game Development with C#"
-            />
-            <Card
-              students={100023}
-              image={courseImg7}
-              rating={4.2}
-              category="Development"
-              price={321}
-              title="Learn Game Development with C#"
-            />
-            <Card
-              students={100023}
-              image={courseImg7}
-              rating={4.2}
-              category="Development"
-              price={321}
-              title="Learn Game Development with C#"
-            />
-            <Card
-              students={100023}
-              image={courseImg7}
-              rating={4.2}
-              category="Development"
-              price={321}
-              title="Learn Game Development with C#"
-            />
+            <Link to={`#`}>
+              <Card
+                students={100023}
+                image={courseImg6}
+                rating={4.2}
+                category="Development"
+                price={321}
+                title="Front End Development "
+              />
+            </Link>
           </div>
         </div>
         <div className="pb-10">
