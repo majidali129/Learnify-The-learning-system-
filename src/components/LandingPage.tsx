@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import bannerImgDesktop from "@/assets/images/hero-desktop.png";
 import bannerImgMoile from "@/assets/images/hero-mobile.jpg";
@@ -9,10 +7,6 @@ import courseImg1 from "@/assets/images/best-courses/1.png";
 import courseImg2 from "@/assets/images/best-courses/2.png";
 import courseImg3 from "@/assets/images/best-courses/3.png";
 import courseImg4 from "@/assets/images/best-courses/4.png";
-import courseImg6 from "@/assets/images/best-courses/6.png";
-import courseImg7 from "@/assets/images/best-courses/7.png";
-import courseImg8 from "@/assets/images/best-courses/8.png";
-import courseImg9 from "@/assets/images/best-courses/9.png";
 import google from "@/assets/images/companies/google.png";
 import netflex from "@/assets/images/companies/netflix.png";
 import youtube from "@/assets/images/companies/youtube.png";
@@ -24,17 +18,13 @@ import microsoft from "@/assets/images/companies/microsoft.png";
 import BrowseCategoryCard from "@/components/BrowseCategoryCard";
 import Card from "@/components/Card";
 import { MoveRight } from "lucide-react";
-import InstructorCard from "@/components/InstructorCard";
-import { INSTRUCTORS } from "@/constants";
-import Footer from "@/components/Footer";
 import { GoSearch } from "react-icons/go";
 import { Input } from "@/components/ui/input";
-import MobileNav from "@/components/MobileNav";
+import InstructorsList from "@/features/Instructors/components/InstructorsList";
+import CourseList from "@/features/Courses/components/CourseList";
 const HomePage = () => {
   return (
     <>
-      <Header />
-      <Navbar />
       {/* Hero section */}
       <section className="w-full flex flex-col md:flex-row items-center !gap-0 bg-[linear-gradient(3deg,rgba(203,207,222,0.020975577731092487)_0%,#fff_100%)] ">
         <div className="order-2 px-3 lg:w-10/12 max-sm:py-3 md:order-1">
@@ -111,146 +101,7 @@ const HomePage = () => {
         <div className="tw-container ">
           <div className="flex-col flex-center tw-space-y">
             <h2>Best selling courses</h2>
-            <div className="course-grid">
-              <Card
-                students={100023}
-                image={courseImg1}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Front End Development "
-              />
-              <Card
-                students={100023}
-                image={courseImg1}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Front End Development "
-              />
-              <Card
-                students={100023}
-                image={courseImg2}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Learn Game Development with C#"
-              />
-              <Card
-                students={100023}
-                image={courseImg3}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Back End Development In JavaScript"
-              />
-              <Card
-                students={100023}
-                image={courseImg4}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Let's Build Communication "
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recently Added Courses Section */}
-      <section className="bg-white-1">
-        <div className="tw-container ">
-          <div className="flex-col flex-center tw-space-y">
-            <h2>Recently Added Courses</h2>
-            <div className="course-grid">
-              <Card
-                students={100023}
-                image={courseImg6}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Front End Development "
-              />
-              <Card
-                students={100023}
-                image={courseImg7}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Learn Game Development with C#"
-              />
-              <Card
-                students={100023}
-                image={courseImg8}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Back End Development In JavaScript"
-              />
-              <Card
-                students={100023}
-                image={courseImg8}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Back End Development In JavaScript"
-              />
-              <Card
-                students={100023}
-                image={courseImg9}
-                rating={4.2}
-                category="Development"
-                price={321}
-                title="Let's Build Communication "
-              />
-            </div>
-            <Button variant="secondary" className="font-semibold flex-center">
-              {" "}
-              <span>Browse All Courses</span>{" "}
-              <span>
-                <MoveRight />
-              </span>
-            </Button>
-          </div>
-        </div>
-      </section>
-      {/* Promotion Section */}
-      <section className="bg-inherit">
-        <div className="tw-container ">
-          <div className="py-2 flex-center">
-            <div className="grid w-full gap-6 card-wrapper sm:grid-cols-2">
-              <img src={promotion1} alt="Promotion Banner Image" />
-              <img src={promotion2} alt="Promotion Banner Image" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Top Instructor Section */}
-      <section className="bg-white-1">
-        <div className="tw-container">
-          <div className="flex-col flex-center tw-space-y">
-            <h2>Top instructors of the month</h2>
-            <div className="grid w-full card-wrapper max-sm:gap-y-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 xl:gap-x-6 gap-y-4 md:gap-4 lg:gap-x-7 lg:gap-y-7 *:rounded-sm">
-              {INSTRUCTORS.slice(5).map((ins) => (
-                <InstructorCard
-                  key={ins.id}
-                  name={ins.name}
-                  field={ins.field}
-                  students={ins.noOfStudents}
-                  rating={ins.rating}
-                />
-              ))}
-            </div>
-            <div className="flex-between">
-              <p className="text">
-                Thousands of students waiting for a instructor. Start teaching &
-                earning now!.
-              </p>
-              <Button variant="link">
-                <span>Become Instructor</span> <MoveRight />
-              </Button>
-            </div>
+            <CourseList />
           </div>
         </div>
       </section>
@@ -297,11 +148,52 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      {/* Recently Added Courses Section */}
+      <section className="bg-white-1">
+        <div className="tw-container">
+          <div className="flex-col flex-center tw-space-y">
+            <h2>Recently Added Courses</h2>
+            <CourseList />
+            <Button variant="secondary" className="font-semibold flex-center">
+              {" "}
+              <span>Browse All Courses</span>{" "}
+              <span>
+                <MoveRight />
+              </span>
+            </Button>
+          </div>
+        </div>
+      </section>
+      {/* Promotion Section */}
+      <section className="bg-inherit">
+        <div className="tw-container ">
+          <div className="py-2 flex-center">
+            <div className="grid w-full gap-6 card-wrapper sm:grid-cols-2">
+              <img src={promotion1} alt="Promotion Banner Image" />
+              <img src={promotion2} alt="Promotion Banner Image" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Footer Section */}
-      <Footer />
-
-      <MobileNav />
+      {/* Top Instructor Section */}
+      <section className="bg-white-1">
+        <div className="tw-container">
+          <div className="flex-col flex-center tw-space-y">
+            <h2>Top instructors of the month</h2>
+            <InstructorsList />
+            <div className="flex-between">
+              <p className="text">
+                Thousands of students waiting for a instructor. Start teaching &
+                earning now!.
+              </p>
+              <Button variant="link">
+                <span>Become Instructor</span> <MoveRight />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

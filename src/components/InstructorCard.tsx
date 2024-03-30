@@ -20,7 +20,7 @@ const InstructorCard = ({children, name, field, students, rating}: InstructorPro
         className="object-cover w-full h-full"
       />
     </figure>
-    <div className="border border-t-0 border-slate-200">
+    <div className="border border-t-0 border-slate-200 bg-white-1">
     <div className="py-1.5 text-center border-b instructor-info border-slate-200">
       <h5>{name}</h5>
       <h6 className="text !mt-0">{field}</h6>

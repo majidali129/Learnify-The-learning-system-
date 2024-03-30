@@ -18,12 +18,12 @@ const Card = ({image, title, category, rating, students, price}:CardProps) => {
             {`${price}$`}
         </div>
         <img
-          src={image}
+          src='https://plus.unsplash.com/premium_photo-1711508491465-1f242f42c826?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8'
           alt="Popular course image"
           className="object-cover w-full h-full aspect-video [clip-path:polygon(0_0,100%_0,100%_90%,0%_100%);]"
         />
       </figure>
-      <div className="px-2 py-2 space-y-2 lg:py-3 lg:px-3">
+      <div className="px-2 py-5 space-y-2.5 lg:px-3">
         <Badge variant='outline'>{category}</Badge>
         <h5>{title}</h5>
         <p className="flex-between">
